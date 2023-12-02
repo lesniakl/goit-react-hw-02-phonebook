@@ -1,11 +1,12 @@
 import Contact from 'components/Contact/Contact';
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import css from './ContactList.module.css';
 
 export default class ContactList extends Component {
   render() {
     return (
-      <ul>
+      <ul className={css.contactList}>
         {this.props.contacts.map(contact => {
           if (!this.props.filter) {
             return (

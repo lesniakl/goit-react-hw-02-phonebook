@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import css from './Contact.module.css';
 
 export default class Contact extends Component {
   render() {
     return (
-      <li>
+      <li className={css.contactItem}>
         {this.props.name}: {this.props.number}
         <button
           type="button"
           onClick={this.props.onDelete}
           name={this.props.name}
+          className={css.contactButton}
         >
           Delete
         </button>
